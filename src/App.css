@@ -1,2 +1,8 @@
 #root {
 }
+ul {
+  list-style: lower-roman;
+}
+li {
+  padding-bottom: 8px;
+}
