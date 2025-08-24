@@ -11,8 +11,33 @@ ul {
   color: #333333;
   padding-left: 12px;
   padding-right: 12px;
-  list-style: lower-roman;
+  counter-reset: roman-counter;
+  list-style: none;
 }
 li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 6px;
   padding-bottom: 12px;
+  counter-increment: roman-counter;
+}
+li::before {
+  content: counter(roman-counter, lower-roman) ". ";
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  flex-shrink: 0;
+}
+img {
+  width: 20px;
+}
+p {
+  margin: 0;
+  flex: 1;
 }
