@@ -9,7 +9,7 @@ chrome.contextMenus.onClicked.addListener((info) => {
   if (info.menuItemId === "saveText" && info.selectionText) {
     chrome.storage.local.get({ savedText: [] }, (result) => {
       const updated = [result.savedText, info.selectionText];
-      chrome.storage.local.set({ savedTexts: updated });
+      chrome.storage.local.set({ savedText: updated });
     });
   }
 });
