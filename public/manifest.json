@@ -2,5 +2,13 @@
   "manifest_version": 3,
   "name": "Text Highlight",
   "version": "1.0.0",
-  "description": "A basic extension to highlight text on your webpage"
+  "description": "A basic extension to highlight text on your webpage",
+  "icons": {
+    "32": "icon-32.png"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["scripting"],
+  "host_permissions": ["http://*/*", "https://*/*"]
 }
