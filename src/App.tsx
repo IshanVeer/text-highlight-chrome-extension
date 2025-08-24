@@ -4,9 +4,13 @@ import "./App.css";
 function App() {
   const [texts, setTexts] = useState<string[]>([]);
   useEffect(() => {
-    chrome.storage.local.get("savedTexts", (result) => {
-      setTexts(result.savedTexts || []);
-    });
+    if (typeof chrome !== "undefined" && chrome.storage) {
+      chrome.storage.local.get("savedTexts", (result) => {
+        setTexts(result.savedTexts || []);
+      });
+    } else {
+      console.warn("Chrome sotrage not available in dev mode");
+    }
   }, []);
   return (
     <>

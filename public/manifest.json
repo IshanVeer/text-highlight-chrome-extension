@@ -9,6 +9,9 @@
   "action": {
     "default_popup": "index.html"
   },
-  "permissions": ["scripting"],
+  "background": {
+    "service_worker": "/src/background.ts"
+  },
+  "permissions": ["contextMenus", "storage"],
   "host_permissions": ["http://*/*", "https://*/*"]
 }
