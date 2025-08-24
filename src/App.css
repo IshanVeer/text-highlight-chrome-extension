@@ -2,6 +2,8 @@
 }
 ul {
   padding: 0;
+  padding-left: 6px;
+  padding-right: 6px;
   list-style: lower-roman;
 }
 li {
